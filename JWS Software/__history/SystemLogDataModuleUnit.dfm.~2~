@@ -1,0 +1,30 @@
+object SystemLogDataModule: TSystemLogDataModule
+  OldCreateOrder = False
+  Height = 209
+  Width = 273
+  object qrySettings: TFDTable
+    IndexFieldNames = 'id'
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    UpdateOptions.UpdateTableName = 'settings'
+    TableName = 'settings'
+    Left = 32
+    Top = 40
+    object qrySettingsid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object qrySettingssettingsname: TWideMemoField
+      FieldName = 'settingsname'
+      Origin = 'settingsname'
+      Required = True
+      BlobType = ftWideMemo
+    end
+    object qrySettingssettingsvalue: TWideMemoField
+      FieldName = 'settingsvalue'
+      Origin = 'settingsvalue'
+      BlobType = ftWideMemo
+    end
+  end
+end

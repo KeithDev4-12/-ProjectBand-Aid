@@ -1,0 +1,25 @@
+unit UserDataModuleUnit;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TUserDataModule = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  UserDataModule: TUserDataModule;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

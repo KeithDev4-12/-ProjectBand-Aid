@@ -1,0 +1,12 @@
+object ConsumerAccountDataModule: TConsumerAccountDataModule
+  OldCreateOrder = False
+  Height = 232
+  Width = 290
+  object qryMasterRecord: TFDQuery
+    SQL.Strings = (
+      'select ID,ROUTECODE,'
+      'CAST(ROUTEADDRESS as Char(20)) as ROUTEADDRESS from routes')
+    Left = 56
+    Top = 72
+  end
+end

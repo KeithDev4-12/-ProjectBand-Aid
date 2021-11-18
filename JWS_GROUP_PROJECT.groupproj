@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0BD6635E-7336-4DDE-9DC1-60C02F0A0191}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="JWS Software\JWSSoftware.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="JWS Tools\JWSTools.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="JWSSoftware">
+        <MSBuild Projects="JWS Software\JWSSoftware.dproj"/>
+    </Target>
+    <Target Name="JWSSoftware:Clean">
+        <MSBuild Projects="JWS Software\JWSSoftware.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="JWSSoftware:Make">
+        <MSBuild Projects="JWS Software\JWSSoftware.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="JWSTools">
+        <MSBuild Projects="JWS Tools\JWSTools.dproj"/>
+    </Target>
+    <Target Name="JWSTools:Clean">
+        <MSBuild Projects="JWS Tools\JWSTools.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="JWSTools:Make">
+        <MSBuild Projects="JWS Tools\JWSTools.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="JWSSoftware;JWSTools"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="JWSSoftware:Clean;JWSTools:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="JWSSoftware:Make;JWSTools:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

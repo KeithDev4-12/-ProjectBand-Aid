@@ -1,0 +1,27 @@
+unit RouteDataModuleUnit;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TRouteDataModule = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  RouteDataModule: TRouteDataModule;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+uses MainDataModuleUnit;
+
+end.

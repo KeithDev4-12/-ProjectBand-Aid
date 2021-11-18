@@ -1,0 +1,598 @@
+object DownloadingNewReadingDataModule: TDownloadingNewReadingDataModule
+  OldCreateOrder = False
+  Height = 349
+  Width = 494
+  object tblMeterReader: TFDTable
+    IndexFieldNames = 'id'
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    UpdateOptions.UpdateTableName = 'meterreader'
+    TableName = 'meterreader'
+    Left = 48
+    Top = 40
+    object tblMeterReaderid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object tblMeterReadername: TWideMemoField
+      FieldName = 'name'
+      Origin = 'name'
+      Required = True
+      BlobType = ftWideMemo
+    end
+  end
+  object tblConsumerAccount: TFDTable
+    IndexFieldNames = 'id'
+    Aggregates = <
+      item
+      end>
+    ConstraintsEnabled = True
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    FetchOptions.AssignedValues = [evMode, evItems]
+    FetchOptions.Mode = fmManual
+    FetchOptions.Items = [fiMeta]
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.UpdateChangedFields = False
+    UpdateOptions.LockWait = True
+    UpdateOptions.RefreshMode = rmManual
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.CheckReadOnly = False
+    UpdateOptions.CheckUpdatable = False
+    UpdateOptions.UpdateTableName = 'consumeraccount'
+    TableName = 'consumeraccount'
+    Left = 160
+    Top = 40
+    object tblConsumerAccountid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      IdentityInsert = True
+    end
+    object tblConsumerAccountaccountno: TWideMemoField
+      FieldName = 'accountno'
+      Origin = 'accountno'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountaccountname: TWideMemoField
+      FieldName = 'accountname'
+      Origin = 'accountname'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountroutesequence: TIntegerField
+      FieldName = 'routesequence'
+      Origin = 'routesequence'
+    end
+    object tblConsumerAccountroutecode: TIntegerField
+      FieldName = 'routecode'
+      Origin = 'routecode'
+    end
+    object tblConsumerAccountrouteaddress: TWideMemoField
+      FieldName = 'routeaddress'
+      Origin = 'routeaddress'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountratecode: TIntegerField
+      FieldName = 'ratecode'
+      Origin = 'ratecode'
+    end
+    object tblConsumerAccountconnectiontype: TWideMemoField
+      FieldName = 'connectiontype'
+      Origin = 'connectiontype'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountconnectionstatus: TWideMemoField
+      FieldName = 'connectionstatus'
+      Origin = 'connectionstatus'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountnewconnectionstatus: TWideMemoField
+      FieldName = 'newconnectionstatus'
+      Origin = 'newconnectionstatus'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountisseniorcitizen: TIntegerField
+      FieldName = 'isseniorcitizen'
+      Origin = 'isseniorcitizen'
+    end
+    object tblConsumerAccountmobilenumber: TWideMemoField
+      FieldName = 'mobilenumber'
+      Origin = 'mobilenumber'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountmeterbrand: TWideMemoField
+      FieldName = 'meterbrand'
+      Origin = 'meterbrand'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountmeterserialno: TWideMemoField
+      FieldName = 'meterserialno'
+      Origin = 'meterserialno'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountbillmonth: TWideMemoField
+      FieldName = 'billmonth'
+      Origin = 'billmonth'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountbillnumber: TIntegerField
+      FieldName = 'billnumber'
+      Origin = 'billnumber'
+    end
+    object tblConsumerAccountpreviousreading: TFloatField
+      FieldName = 'previousreading'
+      Origin = 'previousreading'
+    end
+    object tblConsumerAccountpreviousreadingdate: TWideMemoField
+      FieldName = 'previousreadingdate'
+      Origin = 'previousreadingdate'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountpresentreading: TFloatField
+      FieldName = 'presentreading'
+      Origin = 'presentreading'
+    end
+    object tblConsumerAccountpresentreadingdate: TWideMemoField
+      FieldName = 'presentreadingdate'
+      Origin = 'presentreadingdate'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountaverageconsumption: TFloatField
+      FieldName = 'averageconsumption'
+      Origin = 'averageconsumption'
+    end
+    object tblConsumerAccountcurrentconsumption: TFloatField
+      FieldName = 'currentconsumption'
+      Origin = 'currentconsumption'
+    end
+    object tblConsumerAccounttotalconsumption: TFloatField
+      FieldName = 'totalconsumption'
+      Origin = 'totalconsumption'
+    end
+    object tblConsumerAccountoldmeterconsumption: TFloatField
+      FieldName = 'oldmeterconsumption'
+      Origin = 'oldmeterconsumption'
+    end
+    object tblConsumerAccountmeterfindings: TWideMemoField
+      FieldName = 'meterfindings'
+      Origin = 'meterfindings'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountreadingremarks: TWideMemoField
+      FieldName = 'readingremarks'
+      Origin = 'readingremarks'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountcurrentamountdue: TFloatField
+      FieldName = 'currentamountdue'
+      Origin = 'currentamountdue'
+    end
+    object tblConsumerAccounttotalamountdue: TFloatField
+      FieldName = 'totalamountdue'
+      Origin = 'totalamountdue'
+    end
+    object tblConsumerAccounttotalamountafterduedate: TFloatField
+      FieldName = 'totalamountafterduedate'
+      Origin = 'totalamountafterduedate'
+    end
+    object tblConsumerAccountdiscountamount: TFloatField
+      FieldName = 'discountamount'
+      Origin = 'discountamount'
+    end
+    object tblConsumerAccountpenaltyamount: TFloatField
+      FieldName = 'penaltyamount'
+      Origin = 'penaltyamount'
+    end
+    object tblConsumerAccounttotalbillarrears: TFloatField
+      FieldName = 'totalbillarrears'
+      Origin = 'totalbillarrears'
+    end
+    object tblConsumerAccounttotalotherfees: TFloatField
+      FieldName = 'totalotherfees'
+      Origin = 'totalotherfees'
+    end
+    object tblConsumerAccountpaymentduedate: TWideMemoField
+      FieldName = 'paymentduedate'
+      Origin = 'paymentduedate'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountpaymentdateafterdue: TWideMemoField
+      FieldName = 'paymentdateafterdue'
+      Origin = 'paymentdateafterdue'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountdisconnectiondate: TWideMemoField
+      FieldName = 'disconnectiondate'
+      Origin = 'disconnectiondate'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountreadingtime: TWideMemoField
+      FieldName = 'readingtime'
+      Origin = 'readingtime'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountmeterreadername: TWideMemoField
+      FieldName = 'meterreadername'
+      Origin = 'meterreadername'
+      BlobType = ftWideMemo
+    end
+    object tblConsumerAccountnumberofreadingretry: TIntegerField
+      FieldName = 'numberofreadingretry'
+      Origin = 'numberofreadingretry'
+    end
+    object tblConsumerAccountnumberofbillprinted: TIntegerField
+      FieldName = 'numberofbillprinted'
+      Origin = 'numberofbillprinted'
+    end
+    object tblConsumerAccountnumberofsmssent: TIntegerField
+      FieldName = 'numberofsmssent'
+      Origin = 'numberofsmssent'
+    end
+    object tblConsumerAccountdateuploaded: TWideMemoField
+      FieldName = 'dateuploaded'
+      Origin = 'dateuploaded'
+      BlobType = ftWideMemo
+    end
+  end
+  object FDBatchMove1: TFDBatchMove
+    Reader = FDBatchMoveTextReader1
+    Writer = FDBatchMoveDataSetWriter1
+    Mode = dmUpdate
+    Options = []
+    Mappings = <
+      item
+        SourceFieldName = 'accountno'
+        DestinationFieldName = 'accountno'
+      end
+      item
+        SourceFieldName = 'newconnectionstatus'
+        DestinationFieldName = 'newconnectionstatus'
+      end
+      item
+        SourceFieldName = 'presentreading'
+        DestinationFieldName = 'presentreading'
+      end
+      item
+        SourceFieldName = 'currentconsumption'
+        DestinationFieldName = 'currentconsumption'
+      end
+      item
+        SourceFieldName = 'totalconsumption'
+        DestinationFieldName = 'totalconsumption'
+      end
+      item
+        SourceFieldName = 'meterfindings'
+        DestinationFieldName = 'meterfindings'
+      end
+      item
+        SourceFieldName = 'readingremarks'
+        DestinationFieldName = 'readingremarks'
+      end
+      item
+        SourceFieldName = 'currentamountdue'
+        DestinationFieldName = 'currentamountdue'
+      end
+      item
+        SourceFieldName = 'totalamountdue'
+        DestinationFieldName = 'totalamountdue'
+      end
+      item
+        SourceFieldName = 'totalamountafterduedate'
+        DestinationFieldName = 'totalamountafterduedate'
+      end
+      item
+        SourceFieldName = 'discountamount'
+        DestinationFieldName = 'discountamount'
+      end
+      item
+        SourceFieldName = 'penaltyamount'
+        DestinationFieldName = 'penaltyamount'
+      end
+      item
+        SourceFieldName = 'paymentduedate'
+        DestinationFieldName = 'paymentduedate'
+      end
+      item
+        SourceFieldName = 'paymentdateafterdue'
+        DestinationFieldName = 'paymentdateafterdue'
+      end
+      item
+        SourceFieldName = 'disconnectiondate'
+        DestinationFieldName = 'disconnectiondate'
+      end
+      item
+        SourceFieldName = 'readingtime'
+        DestinationFieldName = 'readingtime'
+      end
+      item
+        SourceFieldName = 'meterreadername'
+        DestinationFieldName = 'meterreadername'
+      end
+      item
+        SourceFieldName = 'numberofreadingretry'
+        DestinationFieldName = 'numberofreadingretry'
+      end
+      item
+        SourceFieldName = 'numberofbillprinted'
+        DestinationFieldName = 'numberofbillprinted'
+      end
+      item
+        SourceFieldName = 'numberofsmssent'
+        DestinationFieldName = 'numberofsmssent'
+      end
+      item
+        SourceFieldName = 'dateuploaded'
+        DestinationFieldName = 'dateuploaded'
+      end>
+    LogFileName = 'Data.log'
+    Left = 392
+    Top = 104
+  end
+  object FDBatchMoveTextReader1: TFDBatchMoveTextReader
+    FileName = 'J:\Juban - Orig\JWS_N_GALVAN_reading_03-02-2021.txt'
+    DataDef.Fields = <
+      item
+        FieldName = 'accountno'
+      end
+      item
+        FieldName = 'newconnectionstatus'
+      end
+      item
+        FieldName = 'presentreading'
+      end
+      item
+        FieldName = 'currentconsumption'
+      end
+      item
+        FieldName = 'totalconsumption'
+      end
+      item
+        FieldName = 'meterfindings'
+      end
+      item
+        FieldName = 'readingremarks'
+      end
+      item
+        FieldName = 'currentamountdue'
+      end
+      item
+        FieldName = 'totalamountdue'
+      end
+      item
+        FieldName = 'totalamountafterduedate'
+      end
+      item
+        FieldName = 'discountamount'
+      end
+      item
+        FieldName = 'penaltyamount'
+      end
+      item
+        FieldName = 'paymentduedate'
+      end
+      item
+        FieldName = 'paymentdateafterdue'
+      end
+      item
+        FieldName = 'disconnectiondate'
+      end
+      item
+        FieldName = 'readingtime'
+      end
+      item
+        FieldName = 'meterreadername'
+      end
+      item
+        FieldName = 'numberofreadingretry'
+      end
+      item
+        FieldName = 'numberofbillprinted'
+      end
+      item
+        FieldName = 'numberofsmssent'
+      end
+      item
+        FieldName = 'dateuploaded'
+      end>
+    DataDef.Delimiter = '"'
+    DataDef.Separator = '|'
+    DataDef.RecordFormat = rfCustom
+    Left = 392
+    Top = 160
+  end
+  object FDBatchMoveDataSetWriter1: TFDBatchMoveDataSetWriter
+    DataSet = tblConsumerAccount
+    Left = 392
+    Top = 216
+  end
+  object qryConsumerAccount: TFDQuery
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    SQL.Strings = (
+      'update consumeraccount '
+      'set'
+      'accountno  =  :Aaccountno,'
+      'newconnectionstatus  =  :Anewconnectionstatus,'
+      'presentreading  =  :Apresentreading,'
+      'presentreadingdate  =  :Apresentreadingdate,'
+      'currentconsumption  =  :Acurrentconsumption,'
+      'totalconsumption  =  :Atotalconsumption,'
+      'meterfindings  =  :Ameterfindings,'
+      'readingremarks  =  :Areadingremarks,'
+      'currentamountdue  =  :Acurrentamountdue,'
+      'totalamountdue  =  :Atotalamountdue,'
+      'totalamountafterduedate  =  :Atotalamountafterduedate,'
+      'discountamount  =  :Adiscountamount,'
+      'penaltyamount  =  :Apenaltyamount,'
+      'paymentduedate  =  :Apaymentduedate,'
+      'paymentdateafterdue  =  :Apaymentdateafterdue,'
+      'disconnectiondate  =  :Adisconnectiondate,'
+      'readingtime  =  :Areadingtime,'
+      'meterreadername  =  :Ameterreadername,'
+      'numberofreadingretry  =  :Anumberofreadingretry,'
+      'numberofbillprinted  =  :Anumberofbillprinted,'
+      'numberofsmssent  =  :Anumberofsmssent,'
+      'dateuploaded = :Adateuploaded'
+      'where'
+      'id = :AId')
+    Left = 64
+    Top = 144
+    ParamData = <
+      item
+        Name = 'AACCOUNTNO'
+        ParamType = ptInput
+        Value = Null
+      end
+      item
+        Name = 'ANEWCONNECTIONSTATUS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'APRESENTREADING'
+        ParamType = ptInput
+      end
+      item
+        Name = 'APRESENTREADINGDATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ACURRENTCONSUMPTION'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ATOTALCONSUMPTION'
+        ParamType = ptInput
+      end
+      item
+        Name = 'AMETERFINDINGS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'AREADINGREMARKS'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ACURRENTAMOUNTDUE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ATOTALAMOUNTDUE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ATOTALAMOUNTAFTERDUEDATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ADISCOUNTAMOUNT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'APENALTYAMOUNT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'APAYMENTDUEDATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'APAYMENTDATEAFTERDUE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ADISCONNECTIONDATE'
+        ParamType = ptInput
+      end
+      item
+        Name = 'AREADINGTIME'
+        ParamType = ptInput
+      end
+      item
+        Name = 'AMETERREADERNAME'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ANUMBEROFREADINGRETRY'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ANUMBEROFBILLPRINTED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ANUMBEROFSMSSENT'
+        ParamType = ptInput
+      end
+      item
+        Name = 'ADATEUPLOADED'
+        ParamType = ptInput
+      end
+      item
+        Name = 'AID'
+        ParamType = ptInput
+      end>
+  end
+  object FDQuery2: TFDQuery
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    SQL.Strings = (
+      'update consumeraccount set'
+      '(accountno,'
+      #10'newconnectionstatus,'
+      #10'presentreading,'
+      #10'presentreadingdate,'
+      #10'currentconsumption,'
+      #10'totalconsumption,'#10
+      'meterfindings,'#10
+      'readingremarks,'
+      #10'currentamountdue,'
+      #10'totalamountdue,'
+      #10'totalamountafterduedate,'
+      #10'discountamount,'
+      #10'penaltyamount,'#10
+      'paymentduedate,'
+      #10'paymentdateafterdue,'
+      'disconnectiondate,'
+      #10'readingtime,'#10
+      'meterreadername,'
+      #10'numberofreadingretry,'
+      #10'numberofbillprinted,'
+      #10'numberofsmssent,'
+      #10'dateuploaded)'
+      'VALUES'
+      '('#39'2019-07-2377'#39', '
+      #39'NO CHANGES'#39', '
+      #39'115.0'#39', '
+      #39'2021-03-02'#39', '
+      #39'3.0'#39', '
+      #39'3.0'#39', '
+      #39'NONE'#39', '
+      #39'NONE'#39', '
+      #39'140.00'#39', '
+      #39'140.00'#39',  '
+      #39'154.00'#39','
+      #39'0.00'#39','
+      #39'14.00'#39',  '
+      #39'2021-03-17'#39', '
+      #39'2021-03-19'#39', '
+      #39'2021-03-22'#39', '
+      #39'10:46:39'#39','
+      #39'Nino Galvan'#39', '
+      #39'1'#39', '
+      #39'0'#39', '
+      #39'0'#39', '
+      #39'2021-03-02'#39' )'
+      ''
+      ''
+      'where'
+      'AccountNo :AAccountNo')
+    Left = 176
+    Top = 192
+    ParamData = <
+      item
+        Name = 'AACCOUNTNO'
+        ParamType = ptInput
+        Value = Null
+      end>
+  end
+end

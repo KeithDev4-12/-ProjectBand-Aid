@@ -1,0 +1,516 @@
+object ToolsForm: TToolsForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'JWS Tools'
+  ClientHeight = 297
+  ClientWidth = 493
+  Color = clBtnHighlight
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  DesignSize = (
+    493
+    297)
+  PixelsPerInch = 97
+  TextHeight = 13
+  object Label4: TLabel
+    Left = 7
+    Top = 145
+    Width = 74
+    Height = 13
+    Caption = 'Status Report :'
+  end
+  object Shape1: TShape
+    Left = -15
+    Top = 0
+    Width = 528
+    Height = 1
+    Anchors = [akLeft, akTop, akRight]
+    Brush.Color = clBackground
+    Pen.Color = cl3DDkShadow
+    ExplicitWidth = 499
+  end
+  object Shape2: TShape
+    Left = 7
+    Top = 105
+    Width = 223
+    Height = 1
+    Pen.Color = cl3DDkShadow
+  end
+  object Label1: TLabel
+    Left = 7
+    Top = 57
+    Width = 73
+    Height = 13
+    Caption = 'Meter Reader :'
+  end
+  object Label2: TLabel
+    Left = 200
+    Top = 57
+    Width = 32
+    Height = 13
+    Caption = '(Filter)'
+    Enabled = False
+  end
+  object Label3: TLabel
+    Left = 203
+    Top = 145
+    Width = 28
+    Height = 13
+    Caption = '(Stat)'
+    Enabled = False
+  end
+  object Label5: TLabel
+    Left = 7
+    Top = 8
+    Width = 52
+    Height = 13
+    Caption = 'Bill Month :'
+  end
+  object Label6: TLabel
+    Left = 182
+    Top = 8
+    Width = 50
+    Height = 13
+    Caption = '(BillMonth)'
+    Enabled = False
+  end
+  object Shape4: TShape
+    Left = 7
+    Top = 55
+    Width = 223
+    Height = 1
+    Pen.Color = cl3DDkShadow
+  end
+  object ComboBox1: TComboBox
+    Left = 11
+    Top = 74
+    Width = 219
+    Height = 29
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    Text = 'ComboBox1'
+    OnChange = ComboBox1Change
+  end
+  object Edit1: TEdit
+    Left = 7
+    Top = 73
+    Width = 206
+    Height = 31
+    AutoSize = False
+    BorderStyle = bsNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInfoText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    TextHint = 'Meter Reader'
+  end
+  object Panel1: TPanel
+    Left = 211
+    Top = 74
+    Width = 40
+    Height = 1
+    BevelOuter = bvNone
+    TabOrder = 2
+  end
+  object Panel2: TPanel
+    Left = 211
+    Top = 100
+    Width = 40
+    Height = 3
+    BevelOuter = bvNone
+    TabOrder = 3
+  end
+  object Panel3: TPanel
+    Left = 229
+    Top = 71
+    Width = 7
+    Height = 31
+    BevelOuter = bvNone
+    TabOrder = 4
+  end
+  object GroupBox1: TGroupBox
+    Left = 239
+    Top = 16
+    Width = 249
+    Height = 247
+    TabOrder = 5
+    object Gauge1: TGauge
+      Left = 2
+      Top = 15
+      Width = 245
+      Height = 230
+      Align = alClient
+      BackColor = 16570031
+      BorderStyle = bsNone
+      ForeColor = 16769196
+      Kind = gkPie
+      Progress = 0
+      ExplicitTop = 7
+      ExplicitWidth = 221
+      ExplicitHeight = 201
+    end
+    object Memo2: TMemo
+      Left = 195
+      Top = 8
+      Width = 217
+      Height = 89
+      TabOrder = 0
+      Visible = False
+      WordWrap = False
+    end
+  end
+  object BitBtn1: TBitBtn
+    Left = 72
+    Top = 112
+    Width = 159
+    Height = 29
+    Caption = 'Get Data'
+    TabOrder = 6
+    OnClick = BitBtn1Click
+  end
+  object RzBitBtn1: TRzBitBtn
+    Left = 39
+    Top = 112
+    Width = 29
+    Height = 29
+    Caption = 'Open'
+    TabOrder = 7
+    OnClick = RzBitBtn1Click
+    Glyph.Data = {
+      36060000424D3606000000000000360400002800000020000000100000000100
+      08000000000000020000430B0000430B00000001000000000000000000003300
+      00006600000099000000CC000000FF0000000033000033330000663300009933
+      0000CC330000FF33000000660000336600006666000099660000CC660000FF66
+      000000990000339900006699000099990000CC990000FF99000000CC000033CC
+      000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF
+      0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00
+      330000333300333333006633330099333300CC333300FF333300006633003366
+      33006666330099663300CC663300FF6633000099330033993300669933009999
+      3300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC
+      330000FF330033FF330066FF330099FF3300CCFF3300FFFF3300000066003300
+      66006600660099006600CC006600FF0066000033660033336600663366009933
+      6600CC336600FF33660000666600336666006666660099666600CC666600FF66
+      660000996600339966006699660099996600CC996600FF99660000CC660033CC
+      660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF
+      6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00
+      990000339900333399006633990099339900CC339900FF339900006699003366
+      99006666990099669900CC669900FF6699000099990033999900669999009999
+      9900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC
+      990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300
+      CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933
+      CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66
+      CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CC
+      CC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FF
+      CC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00
+      FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366
+      FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999
+      FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCC
+      FF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF00FFFFFF00000080000080
+      000000808000800000008000800080800000C0C0C00080808000191919004C4C
+      4C00B2B2B200E5E5E500C8AC2800E0CC6600F2EABF00B59B2400D8E9EC009933
+      6600D075A300ECC6D900646F710099A8AC00E2EFF10000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000E8E8E8E8E8E8
+      E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8
+      E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8A378787878
+      787878787878AAE8E8E8E88181818181818181818181ACE8E8E8A3A3D5CECECE
+      CECECECECEA378E8E8E88181E3ACACACACACACACAC8181E8E8E8A3A3CED5D5D5
+      D5D5D5D5D5CE78A3E8E88181ACE3E3E3E3E3E3E3E3AC8181E8E8A3A3CED5D5D5
+      D5D5D5D5D5CEAA78E8E88181ACE3E3E3E3E3E3E3E3ACAC81E8E8A3CEA3D5D5D5
+      D5D5D5D5D5CED578A3E881AC81E3E3E3E3E3E3E3E3ACE38181E8A3CEAAAAD5D5
+      D5D5D5D5D5CED5AA78E881ACACACE3E3E3E3E3E3E3ACE3AC81E8A3D5CEA3D6D6
+      D6D6D6D6D6D5D6D678E881E3AC81E3E3E3E3E3E3E3E3E3E381E8A3D5D5CEA3A3
+      A3A3A3A3A3A3A3A3CEE881E3E3AC81818181818181818181ACE8A3D6D5D5D5D5
+      D6D6D6D6D678E8E8E8E881E3E3E3E3E3E3E3E3E3E381E8E8E8E8E8A3D6D6D6D6
+      A3A3A3A3A3E8E8E8E8E8E881E3E3E3E38181818181E8E8E8E8E8E8E8A3A3A3A3
+      E8E8E8E8E8E8E8090909E8E881818181E8E8E8E8E8E8E8818181E8E8E8E8E8E8
+      E8E8E8E8E8E8E8E80909E8E8E8E8E8E8E8E8E8E8E8E8E8E88181E8E8E8E8E8E8
+      E8E8E809E8E8E809E809E8E8E8E8E8E8E8E8E881E8E8E881E881E8E8E8E8E8E8
+      E8E8E8E8090909E8E8E8E8E8E8E8E8E8E8E8E8E8818181E8E8E8}
+    NumGlyphs = 2
+  end
+  object Memo1: TMemo
+    Left = 5
+    Top = 161
+    Width = 226
+    Height = 112
+    TabOrder = 8
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 278
+    Width = 493
+    Height = 19
+    Panels = <
+      item
+        Text = 'Path :'
+        Width = 40
+      end
+      item
+        Text = 'Location'
+        Width = 150
+      end>
+  end
+  object RzBitBtn2: TRzBitBtn
+    Left = 5
+    Top = 112
+    Width = 31
+    Height = 29
+    Caption = 'Select All'
+    TabOrder = 10
+    OnClick = RzBitBtn2Click
+    Glyph.Data = {
+      36060000424D3606000000000000360400002800000020000000100000000100
+      08000000000000020000830E0000830E00000001000000000000000000003300
+      00006600000099000000CC000000FF0000000033000033330000663300009933
+      0000CC330000FF33000000660000336600006666000099660000CC660000FF66
+      000000990000339900006699000099990000CC990000FF99000000CC000033CC
+      000066CC000099CC0000CCCC0000FFCC000000FF000033FF000066FF000099FF
+      0000CCFF0000FFFF000000003300330033006600330099003300CC003300FF00
+      330000333300333333006633330099333300CC333300FF333300006633003366
+      33006666330099663300CC663300FF6633000099330033993300669933009999
+      3300CC993300FF99330000CC330033CC330066CC330099CC3300CCCC3300FFCC
+      330000FF330033FF330066FF330099FF3300CCFF3300FFFF3300000066003300
+      66006600660099006600CC006600FF0066000033660033336600663366009933
+      6600CC336600FF33660000666600336666006666660099666600CC666600FF66
+      660000996600339966006699660099996600CC996600FF99660000CC660033CC
+      660066CC660099CC6600CCCC6600FFCC660000FF660033FF660066FF660099FF
+      6600CCFF6600FFFF660000009900330099006600990099009900CC009900FF00
+      990000339900333399006633990099339900CC339900FF339900006699003366
+      99006666990099669900CC669900FF6699000099990033999900669999009999
+      9900CC999900FF99990000CC990033CC990066CC990099CC9900CCCC9900FFCC
+      990000FF990033FF990066FF990099FF9900CCFF9900FFFF99000000CC003300
+      CC006600CC009900CC00CC00CC00FF00CC000033CC003333CC006633CC009933
+      CC00CC33CC00FF33CC000066CC003366CC006666CC009966CC00CC66CC00FF66
+      CC000099CC003399CC006699CC009999CC00CC99CC00FF99CC0000CCCC0033CC
+      CC0066CCCC0099CCCC00CCCCCC00FFCCCC0000FFCC0033FFCC0066FFCC0099FF
+      CC00CCFFCC00FFFFCC000000FF003300FF006600FF009900FF00CC00FF00FF00
+      FF000033FF003333FF006633FF009933FF00CC33FF00FF33FF000066FF003366
+      FF006666FF009966FF00CC66FF00FF66FF000099FF003399FF006699FF009999
+      FF00CC99FF00FF99FF0000CCFF0033CCFF0066CCFF0099CCFF00CCCCFF00FFCC
+      FF0000FFFF0033FFFF0066FFFF0099FFFF00CCFFFF00FFFFFF00000080000080
+      000000808000800000008000800080800000C0C0C00080808000191919004C4C
+      4C00B2B2B200E5E5E500C8AC2800E0CC6600F2EABF00B59B2400D8E9EC009933
+      6600D075A300ECC6D900646F710099A8AC00E2EFF10000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000E8E8E8E8E8E8
+      E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E8E85E5E5E5E5E
+      5E5E5E5E5E5E5E5E5E5EE8818181818181818181818181818181E85ED7D7D7D7
+      D7D7D7D7D7D7D7D7D75EE881D7D7D7D7D7D7D7D7D7D7D7D7D781E85ED7090909
+      0909090909090909D75EE881D78181818181818181818181D781E85ED7095E5E
+      5E5E5E5E5E5E5E09D75EE881D781ACACACACACACACACAC81D781E85ED7090909
+      0909090909090909D75EE881D78181818181818181818181D781E85ED7095E5E
+      5E5E5E5E5E5E5E09D75EE881D781ACACACACACACACACAC81D781E85ED7090909
+      0909090909090909D75EE881D78181818181818181818181D781E85ED7095E5E
+      5E5E5E5E5E5E5E09D75EE881D781ACACACACACACACACAC81D781E85ED7090909
+      0909090909090909D75EE881D78181818181818181818181D781E85ED7095E5E
+      5E5E5E5E5E5E5E09D75EE881D781ACACACACACACACACAC81D781E85ED7090909
+      0909090909090909D75EE881D78181818181818181818181D781E85ED7095E5E
+      5E5E5E5E5E5E5E09D75EE881D781ACACACACACACACACAC81D781E85ED7090909
+      0909090909090909D75EE881D78181818181818181818181D781E85ED7D7D7D7
+      D7D7D7D7D7D7D7D7D75EE881D7D7D7D7D7D7D7D7D7D7D7D7D781E85E5E5E5E5E
+      5E5E5E5E5E5E5E5E5E5EE8818181818181818181818181818181}
+    NumGlyphs = 2
+  end
+  object Panel4: TPanel
+    Left = 402
+    Top = 112
+    Width = 276
+    Height = 168
+    BevelKind = bkFlat
+    BevelOuter = bvNone
+    TabOrder = 11
+    Visible = False
+    object Label7: TLabel
+      Left = 8
+      Top = 108
+      Width = 79
+      Height = 14
+      Caption = 'Device Name :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 109
+      Top = 108
+      Width = 15
+      Height = 14
+      Caption = '---'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 8
+      Top = 129
+      Width = 99
+      Height = 14
+      Caption = 'Device Serial No. :'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 113
+      Top = 129
+      Width = 15
+      Height = 14
+      Caption = '---'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 8
+      Top = 150
+      Width = 257
+      Height = 14
+      AutoSize = False
+      Caption = 'Note :            Double Click To Select What to Upload  '
+      WordWrap = True
+    end
+    object Shape3: TShape
+      Left = 8
+      Top = 146
+      Width = 255
+      Height = 1
+      Pen.Color = cl3DDkShadow
+    end
+    object ListBox1: TListBox
+      Left = 8
+      Top = 8
+      Width = 255
+      Height = 100
+      ExtendedSelect = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ItemHeight = 13
+      ParentFont = False
+      TabOrder = 0
+      OnDblClick = ListBox1DblClick
+    end
+  end
+  object Edit2: TEdit
+    Left = 7
+    Top = 24
+    Width = 224
+    Height = 31
+    AutoSize = False
+    BorderStyle = bsNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInfoText
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 12
+    TextHint = '(MMYYYY) | BILLMONTH NOW'
+  end
+  object FileOpenDialog1: TFileOpenDialog
+    FavoriteLinks = <>
+    FileTypes = <
+      item
+        DisplayName = 'text'
+        FileMask = '*.txt'
+      end>
+    Options = [fdoStrictFileTypes]
+    Left = 335
+    Top = 69
+  end
+  object VirtualTable1: TVirtualTable
+    FieldDefs = <
+      item
+        Name = 'id'
+        DataType = ftInteger
+      end
+      item
+        Name = 'FileName'
+        DataType = ftString
+        Size = 50
+      end
+      item
+        Name = 'SName'
+        DataType = ftString
+        Size = 150
+      end
+      item
+        Name = 'SDate'
+        DataType = ftString
+        Size = 150
+      end
+      item
+        Name = 'FileDate'
+        DataType = ftDate
+      end
+      item
+        Name = 'MName'
+        DataType = ftString
+        Size = 150
+      end>
+    Left = 400
+    Top = 142
+    Data = {
+      03000600020069640300000000000000080046696C654E616D65010032000000
+      00000500534E616D650100960000000000050053446174650100960000000000
+      080046696C6544617465090000000000000005004D4E616D6501009600000000
+      00000000000000}
+    object VirtualTable1id: TAutoIncField
+      FieldName = 'id'
+    end
+    object VirtualTable1FileName: TStringField
+      FieldName = 'FileName'
+      Size = 50
+    end
+    object VirtualTable1SName: TStringField
+      FieldName = 'SName'
+      Size = 150
+    end
+    object VirtualTable1SDate: TStringField
+      FieldName = 'SDate'
+      Size = 150
+    end
+    object VirtualTable1FileDate: TDateField
+      FieldName = 'FileDate'
+    end
+    object VirtualTable1MName: TStringField
+      FieldName = 'MName'
+      Size = 150
+    end
+  end
+end

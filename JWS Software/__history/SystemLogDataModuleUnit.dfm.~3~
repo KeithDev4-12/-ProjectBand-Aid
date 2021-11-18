@@ -1,0 +1,18 @@
+object SystemLogDataModule: TSystemLogDataModule
+  OldCreateOrder = False
+  Height = 209
+  Width = 273
+  object qrySettings: TFDTable
+    IndexFieldNames = 'id'
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    UpdateOptions.UpdateTableName = 'systemlog'
+    TableName = 'systemlog'
+    Left = 32
+    Top = 40
+  end
+  object FDQuery1: TFDQuery
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    Left = 176
+    Top = 96
+  end
+end

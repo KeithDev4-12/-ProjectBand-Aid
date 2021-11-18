@@ -1,0 +1,14 @@
+object UserDataModule: TUserDataModule
+  OldCreateOrder = False
+  Height = 288
+  Width = 475
+  object fdUser: TFDTable
+    Active = True
+    IndexFieldNames = 'id'
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    UpdateOptions.UpdateTableName = 'users'
+    TableName = 'users'
+    Left = 48
+    Top = 48
+  end
+end

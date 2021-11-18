@@ -1,0 +1,55 @@
+object MeterReaderDataModule: TMeterReaderDataModule
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object tblMeterReader: TFDTable
+    Filtered = True
+    IndexFieldNames = 'id'
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    UpdateOptions.UpdateTableName = 'meterreader'
+    TableName = 'meterreader'
+    Left = 48
+    Top = 56
+    object tblMeterReaderid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tblMeterReadername: TWideMemoField
+      FieldName = 'name'
+      Origin = 'name'
+      Required = True
+      BlobType = ftWideMemo
+    end
+  end
+  object qryMeterReader: TFDQuery
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    SQL.Strings = (
+      'select '
+      'ID,'
+      'CAST(NAME as Char(20)) as METERREADERNAME'
+      'from '
+      'METERREADER')
+    Left = 128
+    Top = 56
+    object qryMeterReaderid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object qryMeterReaderroutecode: TIntegerField
+      FieldName = 'routecode'
+      Origin = 'routecode'
+      Required = True
+    end
+    object qryMeterReaderROUTEADDRESS: TWideStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'ROUTEADDRESS'
+      Origin = 'ROUTEADDRESS'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 32767
+    end
+  end
+end

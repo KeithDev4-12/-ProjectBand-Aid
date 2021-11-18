@@ -1,0 +1,71 @@
+unit ConsumerAccountDataModuleUnit;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TConsumerAccountDataModule = class(TDataModule)
+    qryMasterRecord: TFDQuery;
+    qryMasterRecordid: TFDAutoIncField;
+    qryMasterRecordroutesequence: TIntegerField;
+    qryMasterRecordratecode: TIntegerField;
+    qryMasterRecordisseniorcitizen: TIntegerField;
+    qryMasterRecordbillnumber: TIntegerField;
+    qryMasterRecordnumberofreadingretry: TIntegerField;
+    qryMasterRecordnumberofbillprinted: TIntegerField;
+    qryMasterRecordnumberofsmssent: TIntegerField;
+    qryMasterRecordpreviousreading: TFloatField;
+    qryMasterRecordpresentreading: TFloatField;
+    qryMasterRecordaverageconsumption: TFloatField;
+    qryMasterRecordcurrentconsumption: TFloatField;
+    qryMasterRecordtotalconsumption: TFloatField;
+    qryMasterRecordoldmeterconsumption: TFloatField;
+    qryMasterRecordtotalamountdue: TFloatField;
+    qryMasterRecordtotalamountafterduedate: TFloatField;
+    qryMasterRecorddiscountamount: TFloatField;
+    qryMasterRecordpenaltyamount: TFloatField;
+    qryMasterRecordtotalbillarrears: TFloatField;
+    qryMasterRecordtotalotherfees: TFloatField;
+    qryMasterRecordaccountno: TWideStringField;
+    qryMasterRecordaccountname: TWideStringField;
+    qryMasterRecordrouteaddress: TWideStringField;
+    qryMasterRecordconnectiontype: TWideStringField;
+    qryMasterRecordconnectionstatus: TWideStringField;
+    qryMasterRecordnewconnectionstatus: TWideStringField;
+    qryMasterRecordmobilenumber: TWideStringField;
+    qryMasterRecordmeterbrand: TWideStringField;
+    qryMasterRecordmeterserialno: TWideStringField;
+    qryMasterRecordbillmonth: TWideStringField;
+    qryMasterRecordpreviousreadingdate: TWideStringField;
+    qryMasterRecordpresentreadingdate: TWideStringField;
+    qryMasterRecordmeterfindings: TWideStringField;
+    qryMasterRecordreadingremarks: TWideStringField;
+    qryMasterRecordpaymentduedate: TWideStringField;
+    qryMasterRecordpaymentdateafterdue: TWideStringField;
+    qryMasterRecorddisconnectiondate: TWideStringField;
+    qryMasterRecordreadingtime: TWideStringField;
+    qryMasterRecordmeterreadername: TWideStringField;
+    qryMasterRecorddateuploaded: TWideStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ConsumerAccountDataModule: TConsumerAccountDataModule;
+
+implementation
+
+Uses MainDataModuleUnit;
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,51 @@
+unit SettingsDataModuleUnit;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+
+type
+  TSettingsDataModule = class(TDataModule)
+    qrySettings______: TFDQuery;
+    qryFieldFindings____: TFDQuery;
+    qryFieldFindings____id: TFDAutoIncField;
+    qryFieldFindings____FieldFindingsType: TWideStringField;
+    qryFieldFindings____FieldFindingsValue: TWideStringField;
+    qryFieldFindings____printbillflag: TIntegerField;
+    qrySettings______id: TFDAutoIncField;
+    qrySettings______settingsname: TWideStringField;
+    qrySettings______settingsvalue: TWideStringField;
+    qrySettings: TFDTable;
+    qrySettingsid: TFDAutoIncField;
+    qrySettingssettingsname: TWideMemoField;
+    qrySettingssettingsvalue: TWideMemoField;
+    qryFieldFindings: TFDTable;
+    qryFieldFindingsid: TFDAutoIncField;
+    qryFieldFindingsfieldfindingstype: TWideMemoField;
+    qryFieldFindingsfieldfindingsvalue: TWideMemoField;
+    qryFieldFindingsprintbillflag: TIntegerField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SettingsDataModule: TSettingsDataModule;
+
+
+implementation
+
+uses
+  MainDataModuleUnit;
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

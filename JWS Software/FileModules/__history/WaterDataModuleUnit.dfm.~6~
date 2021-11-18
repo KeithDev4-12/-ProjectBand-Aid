@@ -1,0 +1,99 @@
+object WaterDataModule: TWaterDataModule
+  OldCreateOrder = False
+  Height = 227
+  Width = 255
+  object tblWaterRate___: TFDTable
+    IndexFieldNames = 'id'
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    UpdateOptions.UpdateTableName = 'waterrate'
+    TableName = 'waterrate'
+    Left = 64
+    Top = 72
+    object tblWaterRate___id: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object tblWaterRate___ratecode: TIntegerField
+      FieldName = 'ratecode'
+      Origin = 'ratecode'
+      Required = True
+    end
+    object tblWaterRate___connectiontype: TWideMemoField
+      FieldName = 'connectiontype'
+      Origin = 'connectiontype'
+      Required = True
+      BlobType = ftWideMemo
+    end
+    object tblWaterRate___consumptionfrom: TFloatField
+      FieldName = 'consumptionfrom'
+      Origin = 'consumptionfrom'
+      Required = True
+    end
+    object tblWaterRate___consumptionto: TFloatField
+      FieldName = 'consumptionto'
+      Origin = 'consumptionto'
+      Required = True
+    end
+    object tblWaterRate___ratebaseamount: TFloatField
+      FieldName = 'ratebaseamount'
+      Origin = 'ratebaseamount'
+      Required = True
+    end
+    object tblWaterRate___rateaddamount: TFloatField
+      FieldName = 'rateaddamount'
+      Origin = 'rateaddamount'
+      Required = True
+    end
+  end
+  object tblWaterRate: TFDQuery
+    Connection = MainDataModule.SQLiteJWSDesktopConn
+    SQL.Strings = (
+      
+        'select ID,RATECODE,CAST(CONNECTIONTYPE as Char(20)) as Connectio' +
+        'nType,'
+      'consumptionfrom,consumptionto,'
+      'ratebaseamount,rateaddamount'
+      ''
+      ' from waterrate')
+    Left = 104
+    Top = 128
+    object tblWaterRateid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tblWaterRateratecode: TIntegerField
+      FieldName = 'ratecode'
+      Origin = 'ratecode'
+      Required = True
+    end
+    object tblWaterRateconnectiontype: TWideMemoField
+      FieldName = 'connectiontype'
+      Origin = 'connectiontype'
+      Required = True
+      BlobType = ftWideMemo
+    end
+    object tblWaterRateconsumptionfrom: TFloatField
+      FieldName = 'consumptionfrom'
+      Origin = 'consumptionfrom'
+      Required = True
+    end
+    object tblWaterRateconsumptionto: TFloatField
+      FieldName = 'consumptionto'
+      Origin = 'consumptionto'
+      Required = True
+    end
+    object tblWaterRateratebaseamount: TFloatField
+      FieldName = 'ratebaseamount'
+      Origin = 'ratebaseamount'
+      Required = True
+    end
+    object tblWaterRaterateaddamount: TFloatField
+      FieldName = 'rateaddamount'
+      Origin = 'rateaddamount'
+      Required = True
+    end
+  end
+end

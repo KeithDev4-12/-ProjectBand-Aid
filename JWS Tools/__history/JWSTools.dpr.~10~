@@ -1,0 +1,17 @@
+program JWSTools;
+
+uses
+  Vcl.Forms,
+  ToolsFormUnit in 'ToolsFormUnit.pas' {ToolsForm},
+  MainDataModuleUnit in '..\JWS Software\MainDataModuleUnit.pas' {MainDataModule: TDataModule},
+  ToolsDataModuleUnit in 'ToolsDataModuleUnit.pas' {ToolsDataModule: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TToolsForm, ToolsForm);
+  Application.CreateForm(TToolsDataModule, ToolsDataModule);
+  Application.Run;
+end.

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/07/24 16:13:53.000.719,=D:\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2020/07/24 16:22:36.000.909,=D:\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/03/15 10:09:00.000.442,=D:\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/03/15 10:12:44.000.373,J:\@ProjectBand-Aid\JWS Tools\ToolsFormUnit.dfm=D:\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2021/03/15 10:12:44.000.373,J:\@ProjectBand-Aid\JWS Tools\ToolsFormUnit.pas=D:\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2021/03/15 10:13:05.000.901,J:\@ProjectBand-Aid\JWS Tools\JWSTools.dproj=D:\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2021/03/23 21:33:05.000.127,=J:\@ProjectBand-Aid\JWS Tools\CommandPromtUnit.pas</Transaction>
+    <Transaction>2021/04/12 19:52:04.000.137,=J:\@ProjectBand-Aid\JWS Tools\Unit1.pas</Transaction>
+    <Transaction>2021/04/12 19:52:44.000.085,J:\@ProjectBand-Aid\JWS Software\TaskModules\ViewFormUnit.pas=J:\@ProjectBand-Aid\JWS Tools\Unit1.pas</Transaction>
+    <Transaction>2021/04/12 19:52:44.000.085,J:\@ProjectBand-Aid\JWS Software\TaskModules\ViewFormUnit.dfm=J:\@ProjectBand-Aid\JWS Tools\Unit1.dfm</Transaction>
+    <Transaction>2021/04/12 19:52:58.000.737,J:\@ProjectBand-Aid\JWS Software\TaskModules\ViewFormUnit.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,39 @@
+unit ConsumerAccountDataFormUnit;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  DBGridEhGrouping, ToolCtrlsEh, DBGridEhToolCtrls, DynVarsEh, Vcl.ComCtrls,
+  EhLibVCL, GridsEh, DBAxisGridsEh, DBGridEh;
+
+type
+  TConsumerAccountDataForm = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Shape1: TShape;
+    DBGridEh1: TDBGridEh;
+    StatusBar1: TStatusBar;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ConsumerAccountDataForm: TConsumerAccountDataForm;
+
+implementation
+
+{$R *.dfm}
+
+end.

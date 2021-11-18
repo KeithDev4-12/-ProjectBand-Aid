@@ -1,0 +1,5 @@
+object WaterDataModule: TWaterDataModule
+  OldCreateOrder = False
+  Height = 227
+  Width = 255
+end
